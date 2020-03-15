@@ -1,0 +1,14 @@
+{% extends 'vendas/base.html' %}
+
+{% block content %}
+    <h2>Detalhar Venda:</h2>
+
+    <ul>
+        <li><b>Nota Fiscal nº:</b> {{ nota_fiscal.numero }}</li>
+        <li><b>Data da Venda:</b> {{ nota_fiscal.data_venda }}</li>
+        <li><b>Cliente:</b> {{ nota_fiscal.cliente.nome }}</li>
+        <li><b>Produto:</b> {{ nota_fiscal.item.nome }}</li>
+    </ul>
+
+    <a href="{% url 'vendas:listar_vendas' %}">Retornar à Listagem</a>
+{% endblock %}

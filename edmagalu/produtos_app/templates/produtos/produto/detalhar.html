@@ -1,0 +1,16 @@
+
+{% block title %}
+    Detalhar Produto
+{% endblock %}
+
+{% block content %}
+    <h2>Detalhar Produto:</h2>
+
+    <ul>
+        <li><b>codigo: </b>{{ produto.codigo }}</li>
+        <li><b>nome: </b>{{ produto.nome }}</li>
+        <li><b>descricao: </b>{{ produto.descricao }}</li>
+    </ul>
+
+    <a href="{% url 'produtos:listar' %}">Voltar para a Listagem</a>
+{% endblock %}

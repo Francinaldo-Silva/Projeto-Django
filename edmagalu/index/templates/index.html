@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+        {% block title %}
+                <title>EDMAGAZINE</title>
+        {% endblock title %}
+</head>
+<body background="static/img/fundo.png">
+<div id="img">
+        <img src="static/img/icon2.png">
+        <b>EDMAGAZINE</b>
+
+
+</div>
+<div class="centro" align="center">
+        <img src="static/img/icon.png">
+        <h4>REALIZE SUAS COMPRAS AGORA MESMO</h4>
+</div>
+        <div id="link">
+                 {% block content %}
+                          <ul>
+
+                                  <li><a href="{% url 'clientes:listar' %}">Clientes</a></li>
+                                   <br/>
+                                 <li><a href="{% url 'produtos:listar' %}">Produtos</a></li>
+                                   <br/>
+                                  <li><a href="{% url 'vendas:listar_vendas' %}">Vendas</a></li>
+                         </ul>
+
+                {% endblock content %}
+        </div>
+
+<center><a href="templates/login.html" methods="get"><button>Login</button></a></center>
+</body>
+<style>
+   #img{
+        border: thin silver solid;
+        border: 2px solid green;
+        width: 14.4%;
+        padding: 15px;
+        text-align: center;
+        font-style: arial;
+        font-size: smaller;
+        text-indent: 0;
+        margin: 0.5em;
+        padding: 0.5em;
+
+       }
+       #link{
+            background: red;
+            width: 8.4%;
+       }
+</style>
+<style>
+        b{
+           color: green;
+        }
+        h4{
+                color: orange;
+        }
+</style>
+<style>
+        .centro img{
+            border: thin silver solid;
+            border: 2px solid green;
+            max-width:200px;
+            max-height:150px;
+            width: auto;
+            height: auto;
+        }
+</style>
+</html>
